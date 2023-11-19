@@ -16,19 +16,29 @@
 
         <h3 class="title">Erstelle deine To Do Liste</h3>
         <div>
-            <a href="https://www.tiktok.com/@dermunkelndeelch" class="icon"><i class="fa-brands fa-tiktok fa-bounce fa-xl" style="color: #ff0095;"></i></a>
+            <a href="https://www.tiktok.com/@dermunkelndeelch" class="icon"><i class="fa-brands fa-tiktok fa-bounce fa-xl" style="color: #ff0095;" id="tiktok"></i></a>
         
         </div>
-        <div>
-
-        </div>
+       
         <label for="textbox">Gib hier etwas ein:</label>
     
         <input type="text" id="textbox" name="inputText">
     
         <button onclick="erstelleTextbox()" id="btn1">Absenden</button>
+        
+        <article class="regular">
+            <label>Ansprache</label>
+            <input type="list" name="Ansprache" list="Ansprache" id="ansp">
+                <datalist id="Ansprache">
+                <option value="Herr"></option>
+                <option value="Frau"></option>
+                <option value="Anonym"></option>
+                </datalist>
+        </article>
+        
     
         <p class="output" id="output1"> </p>
+        
 
 
     </div>
@@ -37,8 +47,9 @@
         const txt1 = document.getElementById("textbox");
         const btn1 = document.getElementById("btn1");
         const out1 = document.getElementById("output1")
+        const ansp = document.getElementById("ansp")
         function erstelleTextbox() {
-            out1.innerHTML = txt1.value;        
+            out1.innerHTML = txt1.value + ansp.value ;        
      }
     </script>
 
